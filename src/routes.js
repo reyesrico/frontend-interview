@@ -10,11 +10,9 @@ import Chat from './Chat';
 export default (store) => (
   <Provider store={store}>
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/chat" component={Chat} />
-        <Route path="/login" component={Login} />
-      </Switch>
+        <div>
+          <Route path="/" component={App} />
+        </div>
     </BrowserRouter>
   </Provider>
 );

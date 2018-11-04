@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router';
 import Chat from './Chat';
 import Login from './Login';
 
@@ -9,6 +8,15 @@ class App extends Component {
     time: window.localStorage.getItem('fi-time') || '',
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    const user = window.localStorage.getItem('fi-user') || '';
+    const time = window.localStorage.getItem('fi-time') || '';
+
+    if(prevState.user !== user) {
+      this.setState({ user, time });
+      this.setState(prevState => ({ user, time }));
+    }
+  }
 
   render() {
     const { time, user } = this.state;

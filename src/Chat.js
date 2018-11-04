@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 import { forEach, includes, map } from 'lodash';
 
 import { addMessageAction, fetchMessagesAction, fetchRoomAction, fetchRoomsAction } from './redux/actions';
+import { scrollToBottom } from './scroll-bottom';
 
 import './Chat.css'
 
@@ -25,6 +26,14 @@ class Chat extends Component {
         if (prevState.roomId !== this.state.roomId) {
             this.fetchData();
         }
+
+        if (prevProps.messages.length !== this.props.messages.length) {
+            this.fetchData();
+        }
+    }
+
+    scrollToBottom = () => {
+        scrollToBottom(this.element);
     }
 
     fetchData = () => {
@@ -34,6 +43,7 @@ class Chat extends Component {
         fetchRoomsAction();
         fetchRoomAction({ roomId });
         fetchMessagesAction({ roomId });
+        this.scrollToBottom();
     }
 
     handleCurrentTime = () => {
@@ -159,7 +169,7 @@ class Chat extends Component {
                             })}
                         </div>
                     </div>
-                    <div className="chat__text-area">
+                    <div className="chat__text-area" ref={element => this.element = element}>
                         {map(messages, (message, key) => {
                             return this.handleMessage(message, key);
                         })}
