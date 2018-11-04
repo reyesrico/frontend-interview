@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router';
+import Chat from './Chat';
+import Login from './Login';
 
 class App extends Component {
+  state = {
+    user: window.localStorage.getItem('fi-user') || '',
+    time: window.localStorage.getItem('fi-time') || '',
+  };
+
+
   render() {
+    const { time, user } = this.state;
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {user && <Chat user={user} time={time} />}
+        {!user && <Login />}
       </div>
     );
   }
