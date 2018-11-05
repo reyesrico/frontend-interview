@@ -5,6 +5,13 @@ import { ChatComponent as Chat } from '../Chat';
 describe('Chat', () => {
   let requiredProps, wrapper;
 
+  let rooms = [
+    { id: 1, name: 'room 1' },
+    { id: 2, name: 'room 2' },
+    { id: 3, name: 'room 3' },
+    { id: 4, name: 'room 4' },
+  ]
+
   beforeEach(() => {
     requiredProps = {
       addMessageAction: () => {},
@@ -13,7 +20,7 @@ describe('Chat', () => {
       fetchRoomsAction: () => {},
       messages: [],
       room: {},
-      rooms: [],
+      rooms,
       user: 'test',
       time: '11/04/2018',  
     };
