@@ -1,5 +1,6 @@
 // First, define a helper function.
 function animateScroll(duration, someElement) {
+  if (!someElement) return;
   var start = someElement.scrollTop;
   var end = someElement.scrollHeight;
   var change = end - start;

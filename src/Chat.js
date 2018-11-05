@@ -193,6 +193,7 @@ Chat.propTypes = {
     addMessageAction: PropTypes.func.isRequired,
     fetchMessagesAction: PropTypes.func.isRequired,
     fetchRoomAction: PropTypes.func.isRequired,
+    fetchRoomsAction: PropTypes.func.isRequired,
     messages: PropTypes.array.isRequired,
     room: PropTypes.object.isRequired,
     rooms: PropTypes.array.isRequired,
@@ -213,4 +214,5 @@ const mapDispatchToProps = {
     fetchRoomsAction,
 };
 
+export { Chat as ChatComponent };
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Chat));
