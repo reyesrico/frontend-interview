@@ -1,19 +1,49 @@
-import axios from 'axios';
-
 const server = 'http://localhost:8080/api';
 
 export const addMessage = ({ roomId, name, message }) => (
-    axios.post(`${server}/rooms/${roomId}/messages`, { roomId, name, message })
+    fetch(`${server}/rooms/${roomId}/messages`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ roomId, name, message })
+    }).then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    }).then(data => ({ data }))
 );
 
 export const fetchMessages = ({ roomId }) => (
-    axios.get(`${server}/rooms/${roomId}/messages`)
+    fetch(`${server}/rooms/${roomId}/messages`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => ({ data }))
 );
 
 export const fetchRooms = () => (
-    axios.get(`${server}/rooms`)
+    fetch(`${server}/rooms`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => ({ data }))
 );
 
 export const fetchRoom = ({ roomId }) => (
-    axios.get(`${server}/rooms/${roomId}`)
+    fetch(`${server}/rooms/${roomId}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => ({ data }))
 );
