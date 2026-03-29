@@ -20,7 +20,7 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "express": "^4.16.4",
-    "http-proxy-middleware": "^2.0.7",
+    "http-proxy-middleware": "^2.0.9",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "jest-enzyme": "^7.0.1",
