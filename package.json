@@ -11,7 +11,8 @@
     "tar": "6.2.1",
     "fsevents": "2.3.3",
     "serialize-javascript": "7.0.3",
-    "undici": "7.24.5"
+    "undici": "7.24.5",
+    "cheerio": "1.0.0-rc.12"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -41,7 +42,9 @@
     "redux-thunk": "^2.3.0",
     "serve": "^14.2.6",
     "shortid": "^2.2.13",
-    "underscore": "^1.13.8"
+    "underscore": "^1.13.8",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0"
   },
   "scripts": {
     "api-server": "node server.js",
