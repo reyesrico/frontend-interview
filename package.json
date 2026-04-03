@@ -12,9 +12,26 @@
     "fsevents": "2.3.3",
     "serialize-javascript": "7.0.3",
     "undici": "7.24.5",
-    "cheerio": "1.0.0-rc.12"
+    "cheerio": "1.0.0-rc.12",
+    "jsonpath": {
+      "underscore": ">=1.13.8"
+    },
+    "@jest/fake-timers": {
+      "braces": ">=3.0.3"
+    },
+    "@jest/transform": {
+      "braces": ">=3.0.3"
+    },
+    "micromatch": {
+      "braces": ">=3.0.3"
+    },
+    "sane": {
+      "braces": ">=3.0.3"
+    }
   },
   "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
     "body-parser": "^1.18.3",
     "braces": "^3.0.3",
     "concurrently": "^9.2.1",
@@ -42,9 +59,7 @@
     "redux-thunk": "^2.3.0",
     "serve": "^14.2.6",
     "shortid": "^2.2.13",
-    "underscore": "^1.13.8",
-    "ajv": "^8.17.1",
-    "ajv-keywords": "^5.1.0"
+    "underscore": "^1.13.8"
   },
   "scripts": {
     "api-server": "node server.js",
