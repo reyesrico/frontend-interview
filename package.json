@@ -14,7 +14,7 @@
     "undici": "7.24.5",
     "cheerio": "1.0.0-rc.12",
     "jsonpath": {
-      "underscore": ">=1.13.8"
+      "underscore": "^1.13.8"
     },
     "@jest/fake-timers": {
       "braces": ">=3.0.3"
@@ -29,7 +29,7 @@
       "braces": ">=3.0.3"
     },
     "babel-core": {
-      "json5": ">=1.0.2"
+      "json5": "^1.0.2"
     }
   },
   "dependencies": {
