@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Routes, Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from './App';
@@ -10,9 +10,9 @@ import Chat from './Chat';
 export default (store) => (
   <Provider store={store}>
     <BrowserRouter>
-        <div>
-          <Route path="/" component={App} />
-        </div>
+      <Routes>
+        <Route path="/*" element={<App />} />
+      </Routes>
     </BrowserRouter>
   </Provider>
 );

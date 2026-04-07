@@ -4,76 +4,40 @@
   "description": "The Frontend take home project for DoorDash",
   "main": "index.js",
   "private": true,
-  "overrides": {
-    "qs": "6.14.1",
-    "minimatch": "10.2.3",
-    "semver": "5.7.2",
-    "tar": "6.2.1",
-    "fsevents": "2.3.3",
-    "serialize-javascript": "7.0.3",
-    "undici": "7.24.5",
-    "cheerio": "1.0.0-rc.12",
-    "jsonpath": {
-      "underscore": "^1.13.8"
-    },
-    "@jest/fake-timers": {
-      "braces": ">=3.0.3"
-    },
-    "@jest/transform": {
-      "braces": ">=3.0.3"
-    },
-    "micromatch": {
-      "braces": ">=3.0.3"
-    },
-    "sane": {
-      "braces": ">=3.0.3"
-    },
-    "babel-core": {
-      "json5": "^1.0.2"
-    }
-  },
   "dependencies": {
-    "ajv": "^8.17.1",
-    "ajv-keywords": "^5.1.0",
-    "body-parser": "^1.18.3",
-    "braces": "^3.0.3",
-    "concurrently": "^9.2.1",
-    "cross-spawn": "^6.0.6",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
-    "express": "^4.16.4",
-    "http-proxy-middleware": "^2.0.7",
-    "jest": "^23.6.0",
-    "jest-cli": "^23.6.0",
-    "jest-enzyme": "^7.0.1",
-    "json5": "^1.0.2",
-    "lodash": "^4.17.11",
-    "moment": "^2.22.2",
-    "node-forge": "^1.4.0",
-    "path-to-regexp": "^0.1.13",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-redux": "^5.1.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "5.0.1",
-    "react-test-renderer": "^16.6.0",
-    "redux": "^4.0.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
+    "react-router": "^6.29.0",
+    "react-router-dom": "^6.29.0",
+    "redux": "^5.0.1",
     "redux-freeze": "^0.1.7",
-    "redux-thunk": "^2.3.0",
+    "redux-thunk": "^3.1.0",
     "serve": "^14.2.6",
-    "shortid": "^2.2.13",
-    "underscore": "^1.13.8"
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "jsdom": "^25.0.1",
+    "vite": "^8.0.7",
+    "vitest": "^4.1.3"
   },
   "scripts": {
     "api-server": "node server.js",
-    "start": "concurrently \"react-scripts start\" \"node server.js \"",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "dev": "concurrently \"vite\" \"node server.js\"",
+    "start": "concurrently \"vite\" \"node server.js\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "browserslist": [
     ">0.2%",
@@ -82,6 +46,6 @@
     "not op_mini all"
   ],
   "engines": {
-    "node": ">=20.18.1"
+    "node": ">=22.12.0"
   }
 }
