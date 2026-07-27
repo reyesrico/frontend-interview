@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { connect } from 'react-redux';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "./withRouter";
 import { forEach, includes, map } from 'lodash';
 
 import { addMessageAction, fetchMessagesAction, fetchRoomAction, fetchRoomsAction } from './redux/actions';

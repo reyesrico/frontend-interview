@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "./withRouter";
 
 import './Login.css';
 
