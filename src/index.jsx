@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import thunk from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import { applyMiddleware, createStore, compose } from 'redux';
 
 import getRoutes from './routes';

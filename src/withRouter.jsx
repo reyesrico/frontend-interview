@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 // react-router v6+ removed the `withRouter` HOC. This shim restores it for the
 // existing class components by injecting a `history`-like object (and `navigate`)
